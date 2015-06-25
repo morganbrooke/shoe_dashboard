@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dashboard</title>
+</head>
+<body>
+	<h2>Shoe Dashboard</h2>
+	<hr>
+	<div id= "container">
+	<table class = "method">
+		<thead>
+        <tr>
+          <th>Brand</th>
+          <th>Type of shoes</th>
+          <th>Heel Height</th>
+          <th>Price</th>
+          <th>Edit | Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+      <% for (var m=0; m< data.length; m++) { %>
+        <tr>
+          <td><u><b> <a href = "/shoes/<%= data[m]._id %>"><%= data[m].brand %></a></b></u></td>
+          <td> <%= data[m].type %> </td>
+          <td> <%= data[m].height %> </td>
+          <td> <%= data[m].price %> </td>
+          <td><u><a href = "shoes/<%= data[m]._id %>/edit">EDIT </a></u> | <u><a href = "shoes/<%= data[m]._id %>/destroy"> DELETE</a></u></td>
+        </tr>
+        <% } %>
+      </tbody>
+    </table><br>
+    <button><a href="/shoes/new">Add More Shoes</button>
+	</div>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Edit Shoes</title>
+</head>
+<body>
+<h3>Edit Shoe</h3>
+<div id= "editContainer">
+	<form id = "edit" action="/shoes/<%= data[0]._id %>" method="post">
+		<input type="text" name ="brand" placeholder="Brand" value ="<%= data[0].brand %>">
+		<input type="text" name="type" placeholder="Type" value="<%= data[0].type%>">
+		<input type="text" name="height" placeholder="Height" value="<%= data[0].height%>">
+		<input type="text" name="price" placeholder="Price" value="<%= data[0].price%>">
+		<input type = 'submit' name="edit_submit" value ='Edit Shoe!'>
+	</form>
+</div>
+</body>
+</html>
